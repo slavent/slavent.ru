@@ -1,0 +1,17 @@
+{
+    "name": "slavent.ru",
+    "version": "1.0.0",
+    "description": "Personal page",
+    "main": "index.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/slavent/slavent.ru.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/slavent/slavent.ru/issues"
+    },
+    "homepage": "https://github.com/slavent/slavent.ru#readme"
+}
