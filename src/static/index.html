@@ -281,7 +281,7 @@
             type: "pageView",
             start: ( new Date() ).getTime()
         } );
-        ( function ( d, w, id ) {
+        ( function( d, w, id ) {
             if ( d.getElementById( id ) ) {
                 return
             }
@@ -290,8 +290,8 @@
             ts.async = true
             ts.id = id
             ts.src = "https://top-fwz1.mail.ru/js/code.js"
-            var f = function () {
-                var s = d.getElementsByTagName( "script" )[ 0 ]
+            var f = function() {
+                var s = d.getElementsByTagName( "script" )[0]
                 s.parentNode.insertBefore( ts, s )
             }
             if ( w.opera == "[object Opera]" ) {
@@ -299,7 +299,8 @@
             } else {
                 f()
             }
-        } )( document, window, "topmailru-code" )
+        } )( document,
+            window, "topmailru-code" )
     </script>
     <noscript>
         <div>
@@ -308,6 +309,18 @@
         </div>
     </noscript>
     <!-- //Rating@Mail.ru counter -->
+
+    <script>
+        if ( "serviceWorker" in navigator ) {
+            window.addEventListener( "load", () => {
+                navigator.serviceWorker.register( "./sw.js" ).then( ( registration ) => {
+                    console.log( "Service worker registered." )
+                } ).catch( ( registrationError ) => {
+                    console.log( "SW registration failed with error: ", registrationError )
+                } )
+            } )
+        }
+    </script>
 </div>
 </body>
 </html>
